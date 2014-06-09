@@ -3,16 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Exemplo do plugin funcionando</title>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script type="text/javascript" src="createSelectBasedInState.js"></script>
-	<script type="text/javascript">
-		$(function(){
-			$(".estado").EstadosToCidades({
-				"selectToOutput": ".cidades",
-				"pathOfJson": "estadosEcidades.json",
-			});
-		});
-	</script>
 </head>
 	<body>
 		<select name="estado" class="estado"  style="width:500px;" maxlength="150" >
@@ -48,4 +38,15 @@
 	 		
 	 	</select>
 	</body>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="vendor/jquery-1.11.0.min.js"><\/script>')</script>
+    <script type="text/javascript" src="createSelectBasedInState.js"></script>
+    <script type="text/javascript">
+		$(function(){
+			$(".estado").EstadosToCidades({
+				"selectToOutput": ".cidades",
+				"pathOfJson": "estadosEcidades.json",
+			});
+		});
+	</script>
 </html>
