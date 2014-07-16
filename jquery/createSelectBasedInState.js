@@ -1,5 +1,7 @@
 (function($){
     $.fn.EstadosToCidades = function(options) {
+        var selector = $(this)[0];
+            $(selector).attr("disabled", "disabled");
         var jsonReturn;
         $.ajax({
             url: options.pathOfJson,
@@ -7,6 +9,7 @@
             type: "get",
         }).done(function(response){
             jsonReturn = response;
+            $(selector).removeAttr("disabled");
         });
         
         return this.change(function() {
